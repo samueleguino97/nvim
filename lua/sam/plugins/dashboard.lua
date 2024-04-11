@@ -35,7 +35,7 @@ return {
         footer = {},
         packages = { enable = false },
         project = {
-          enable = false,
+          enable = true,
         },
         mru = {
           limit = 5,

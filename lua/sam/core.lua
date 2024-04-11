@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 
+vim.cmd("let g:netrw_liststyle = 3")
 vim.keymap.set("n", "<leader>pv", ":Explore<cr>")
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "number"
@@ -13,7 +15,13 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
+vim.opt.clipboard:append("unnamedplus")
+
 vim.opt.smartindent = true
+vim.opt.autoindent = true
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.opt.wrap = false
 
@@ -26,6 +34,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
+vim.opt.background = "dark"
 
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
@@ -39,6 +48,11 @@ vim.keymap.set("n", "<leader>y", '"+y')
 vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n", "<leader>Y", '"+Y')
 
+vim.keymap.set("v", "<leader>p", '"+p')
 vim.keymap.set("n", "<leader>p", '"+p')
 
 vim.keymap.set("n", "Q", "<nop>")
+
+vim.keymap.set("n", "<leader>sv", "<C-w>v")
+vim.keymap.set("n", "<leader>sh", "<C-w>s")
+vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>")

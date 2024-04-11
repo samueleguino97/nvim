@@ -33,8 +33,12 @@ return {
       keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
     end
     local capabilities = cmp_nvim_lsp.default_capabilities()
-
-    local signs = { Error = "E", Warn = "W", Hint = "H", Info = "I" }
+    local signs = {
+      Error = "E",
+      Warning = "",
+      Hint = "H",
+      Information = "",
+    }
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
@@ -69,10 +73,6 @@ return {
       },
     })
     lspconfig["cssls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-    lspconfig["gopls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
