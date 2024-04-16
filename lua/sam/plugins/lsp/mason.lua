@@ -26,6 +26,7 @@ return {
         "cssls",
         "tailwindcss",
         "svelte",
+        "zls",
         "lua_ls",
         "graphql",
         "emmet_ls",

@@ -14,6 +14,7 @@ return {
         json = { "prettier" },
         graphql = { "prettier" },
         lua = { "stylua" },
+        go = { "gopls" },
       },
       format_on_save = {
 

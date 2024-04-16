@@ -17,6 +17,8 @@ return {
         "bash",
         "css",
         "dockerfile",
+        "markdown",
+        "markdown_inline",
         "elixir",
         "fish",
         "go",

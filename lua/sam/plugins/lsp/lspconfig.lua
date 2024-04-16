@@ -29,6 +29,7 @@ return {
       keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
       keymap.set("n", "K", vim.lsp.buf.hover, opts)
       keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
+      keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
 
       keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
     end
@@ -72,7 +73,15 @@ return {
         },
       },
     })
+    lspconfig["zls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
     lspconfig["cssls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+    lspconfig["gopls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
