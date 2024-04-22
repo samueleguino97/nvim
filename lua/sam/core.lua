@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 
 vim.cmd("let g:netrw_liststyle = 3")
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 vim.keymap.set("n", "<leader>pv", ":Oil<cr>")
 
 vim.opt.number = true
@@ -73,3 +74,4 @@ end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
+vim.filetype.add({ extension = { templ = "templ" } })

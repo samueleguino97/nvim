@@ -12,8 +12,10 @@ return {
       indent = {
         enable = true,
       },
+
       ensure_installed = {
 
+        "templ",
         "bash",
         "css",
         "dockerfile",
