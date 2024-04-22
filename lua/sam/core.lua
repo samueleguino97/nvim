@@ -75,3 +75,6 @@ end
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 vim.filetype.add({ extension = { templ = "templ" } })
+vim.keymap.set("n", "gf", "<cmd>diffget //2<CR>")
+vim.keymap.set("n", "gj", "<cmd>diffget //3<CR>")
+vim.keymap.set("n", "<leader>gp", ":G push<CR>")
