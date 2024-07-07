@@ -2,11 +2,19 @@ return {
   "nvim-telescope/telescope.nvim",
   tag = "0.1.6",
   -- or                              , branch = '0.1.x',
-  dependencies = { "nvim-lua/plenary.nvim", { "nvim-telescope/telescope-fzf-native.nvim", build = "make" } },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+    {
+      "isak102/telescope-git-file-history.nvim",
+      dependencies = { "tpope/vim-fugitive" },
+    },
+  },
   config = function()
     local telescope = require("telescope")
     telescope.load_extension("fzf")
     telescope.load_extension("noice")
+    telescope.load_extension("git_file_history")
     local keymap = vim.keymap
 
     keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true <cr>", { desc = "in cwdw" })

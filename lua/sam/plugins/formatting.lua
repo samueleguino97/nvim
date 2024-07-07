@@ -15,6 +15,7 @@ return {
         graphql = { "prettier" },
         lua = { "stylua" },
         go = { "gopls" },
+        c = { "clang-format" },
       },
       format_on_save = {
 
