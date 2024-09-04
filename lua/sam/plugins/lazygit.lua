@@ -1,0 +1,31 @@
+return {
+  "kdheepak/lazygit.nvim",
+  cmd = {
+    "LazyGit",
+    "LazyGitConfig",
+    "LazyGitFetch",
+    "LazyGitLog",
+    "LazyGitStatus",
+    "LazyGitSync",
+    "LazyGitOpen",
+    "LazyGitClose",
+    "LazyGitCurrentBranch",
+    "LazyGitDiff",
+    "LazyGitBlame",
+    "LazyGitCommit",
+    "LazyGitReset",
+    "LazyGitRevert",
+    "LazyGitCheckout",
+    "LazyGitAdd",
+    "LazyGitDelete",
+    "LazyGitResetHard",
+    "LazyGitResetSoft",
+    "LazyGitResetMixed",
+  },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+  },
+  keys = {
+    { "<leader>gg", "<cmd>LazyGit<cr>" },
+  },
+}

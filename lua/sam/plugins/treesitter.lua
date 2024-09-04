@@ -17,6 +17,7 @@ return {
 
         "templ",
         "bash",
+        "svelte",
         "css",
         "dockerfile",
         "markdown",
