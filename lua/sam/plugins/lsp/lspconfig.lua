@@ -44,7 +44,11 @@ return {
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
-    lspconfig["python"].setup({
+    lspconfig["intelephense"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+    lspconfig["pyright"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
@@ -52,12 +56,16 @@ return {
       capabilities = capabilities,
       on_attach = on_attach,
     })
-    lspconfig["tsserver"].setup({
+    lspconfig["ts_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
 
     lspconfig["tailwindcss"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+    lspconfig["csharp_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })

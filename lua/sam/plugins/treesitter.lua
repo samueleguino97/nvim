@@ -14,7 +14,7 @@ return {
       },
 
       ensure_installed = {
-
+        "php",
         "templ",
         "bash",
         "svelte",
@@ -38,6 +38,7 @@ return {
         "tsx",
         "typescript",
         "yaml",
+        "wgsl",
       },
     })
   end,

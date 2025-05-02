@@ -5,6 +5,7 @@ return {
     local conform = require("conform")
     conform.setup({
       formatters_by_ft = {
+        python = { "black" },
         javascript = { "prettier" },
         typescript = { "prettier" },
         javascriptreact = { "prettier" },
@@ -22,7 +23,7 @@ return {
 
         lsp_fallback = true,
         async = false,
-        timeout_ms = 500,
+        timeout_ms = 5000,
       },
     })
     vim.keymap.set({ "n", "v" }, "<leader>mp", function()

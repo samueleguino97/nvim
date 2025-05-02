@@ -13,7 +13,6 @@ return {
   config = function()
     local telescope = require("telescope")
     telescope.load_extension("fzf")
-    telescope.load_extension("noice")
     telescope.load_extension("git_file_history")
     local keymap = vim.keymap
 
